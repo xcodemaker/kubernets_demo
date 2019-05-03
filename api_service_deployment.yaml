@@ -17,8 +17,10 @@ spec:
         app: api-service
         tier: api-tier
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
         - name: api-service-deployment
-          image: xcodemaker/api_service
+          image: xcodemaker/api_service:latest
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 8888

@@ -17,8 +17,10 @@ spec:
         app: data-service
         tier: data-tier
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
         - name: data-service-deployment
-          image: xcodemaker/data_service
+          image: xcodemaker/data_service:latest
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 8000
