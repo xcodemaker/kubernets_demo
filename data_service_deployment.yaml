@@ -23,4 +23,5 @@ spec:
           image: xcodemaker/data_service:latest
           imagePullPolicy: "Always"
           ports:
-            - containerPort: 8000
+            - name: http
+              containerPort: 80
