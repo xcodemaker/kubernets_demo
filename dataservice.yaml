@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data_service_deployment
+spec:
+  selector:
+    app: data_service_deployment
+    tier: data_tier
+  ports:
+  - port: 8000
+  clusterIP: None
