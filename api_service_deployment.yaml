@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api_service_deployment
+  name: api-service-deployment
   labels:
-    app: api_service
-    tier: api_tier
+    app: api-service
+    tier: api-tier
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api_service
-      tier: api_tier
+      app: api-service
+      tier: api-tier
   template:
     metadata:
       labels:
-        app: api_service
-        tier: api_tier
+        app: api-service
+        tier: api-tier
     spec:
       containers:
-        - name: api_service_deployment
+        - name: api-service-deployment
           image: xcodemaker/api_service
           ports:
             - containerPort: 8888

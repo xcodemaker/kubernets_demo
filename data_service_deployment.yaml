@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data_service_deployment
+  name: data-service-deployment
   labels:
-    app: data_service
-    tier: data_tier
+    app: data-service
+    tier: data-tier
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: data_service
-      tier: data_tier
+      app: data-service
+      tier: data-tier
   template:
     metadata:
       labels:
-        app: data_service
-        tier: data_tier
+        app: data-service
+        tier: data-tier
     spec:
       containers:
-        - name: data_service_deployment
+        - name: data-service-deployment
           image: xcodemaker/data_service
           ports:
             - containerPort: 8000
