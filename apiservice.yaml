@@ -4,7 +4,7 @@ metadata:
   name: api-service-deployment
 spec:
   selector:
-    app: api-service-deployment
+    app: api-service
     tier: api-tier
   ports:
   - port: 8888
